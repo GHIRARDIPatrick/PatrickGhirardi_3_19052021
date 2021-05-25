@@ -1,30 +1,14 @@
 /* GENERAL */
 
-@font-face
-/*  Définition des Polices particulières  */
-
-{
-    font-family: 'Shrikhand';
-    src: url('polices/shrikhand/Shrikhand-Regular.otf') format('woff') ;
-    font-weight: normal;
-    font-style: normal;
-}
-
-{
-    font-family: 'Roboto';
-    src: url('polices/roboto/Roboto-Regular.ttf') format('truetype') ;
-    font-weight: normal;
-    font-style: normal;
-}
-
 .font_enseigne{
-	font-family: 'Shrikhand', 'Arial';
+	font-family: 'Shrikhand', cursive;
 }
 
 /*  Plan Général Page  */
 body {
 
-    font-family: 'Roboto', 'Arial';
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
     max-width: 681px;
     margin: 10px;
     border: solid 2px green;  /* Couleur VERTE pour Mobile */
@@ -95,7 +79,9 @@ header{
 /*  FONCTIONNEMENT  */
 .fonctionnement{
 	margin-top: 30px;
-
+}
+.fonctionnement h1{
+	margin-left: 20px;
 }
 .fonctionnement-encadre{
 	height: 70px;
@@ -103,14 +89,16 @@ header{
 	background-color: #f6f6f6;
 	border-radius: 25px;
 	box-shadow: 4px 4px #eaeaea;
+	filter:drop-shadow(4px 4px 4px #eaeaea);
 	display: flex;
 	align-content: flex-start;
 	align-items: center;
 }
 .fonctionnement-encadre__numero{
-	border-radius: 35px;
+	border-radius: 27px;
 	background-color: #9356DC;
-	padding:10px;
+	padding:7px 10px;
+	font-size: 11px;
 	text-decoration: none;
 	color:white;
 	font-weight: normal;
@@ -134,20 +122,24 @@ header{
 
 
 /*  RESTAURANTS  */
-.Restaurants{
+.restaurants{
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	margin: 30px 1% 30px 1px;
 	background-color: #f6f6f6;
 }
+.restaurants h1{
+	margin-left: 30px;
+}
 .restaurants-encadre{
 	background-color: white;
 	width: 90%;
 	margin-left: 5%;
-	box-shadow: 10px; 
+	box-shadow: 4px 4px #eaeaea;
+	filter:drop-shadow(4px 4px 4px #eaeaea);
 	border-radius: 20px 20px 20px 20px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	
 }
 .restaurants-encadre__flex{
@@ -283,6 +275,32 @@ aside span{
 	display: none;	
 }
 
+
+/*  QUESTIONNAIRE - PROPOSITION  */
+form{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding:12px;
+	height: 500px;
+	background-color: #eaeaea;
+	color:f6f6f6;
+	display: flex;
+	flex-wrap: wrap;
+}
+form h1{
+	width: 100%;
+
+}
+label{
+	padding-left:26px;
+	padding-right:100px;
+}
+.form-input{
+	margin-bottom: 15px;
+}
+
+
+
 /*  PIED DE PAGE  */
 footer{
 	margin-top: 30px;
@@ -348,7 +366,7 @@ footer a {
    .fonctionnement{
     	width: 37%;
     }
-    .Restaurants{
+    .restaurants{
     	width: 60%;
     }
     .restaurant-page_menu{
