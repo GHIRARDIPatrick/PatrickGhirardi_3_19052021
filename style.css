@@ -219,8 +219,8 @@ header{
 .restaurant-page__nom-restaurant{
 	display: flex;
 	flex-direction: row;
-	align-content: space-between; 
-	translate: 0px 15px;
+	justify-content: space-between; 
+	margin-right: 20px;
 }
 .restaurant-page h2{
 	width: 85%;
