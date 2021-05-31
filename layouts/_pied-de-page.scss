@@ -1,0 +1,37 @@
+/*  PIED DE PAGE  */
+
+footer {
+    margin-top: 30px;
+    padding: 12px;
+    background-color: $couleur-pied-de-page;
+    color: $couleur-texte-fond;
+    & ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    & li {
+        padding-bottom: 8px;
+    }
+    & a {
+        margin-left: 0;
+        color: $couleur-texte-fond;
+        text-decoration: none;
+    }
+}
+
+.footer__page {
+    margin-top: -50px;
+    padding: 12px;
+    background-color: $couleur-pied-de-page;
+    color: $couleur-texte-fond;
+}
+
+.footer__svg {
+    font-size: 12px;
+    padding-right: 12px;
+}
+
+.footer__svg2 {
+    font-size: 12px;
+    padding-right: 7px;
+}

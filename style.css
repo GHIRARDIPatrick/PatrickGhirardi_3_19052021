@@ -33,7 +33,6 @@ header {
   font-weight: bold;
   color: #353535;
 }
-
 .header-lieu i {
   padding-right: 20px;
 }
@@ -42,12 +41,10 @@ header {
   background-color: #f6f6f6;
   height: 300px;
 }
-
 .header-texte__H2 {
   font-weight: bold;
   font-size: 30px;
 }
-
 .header-texte__H3 {
   font-weight: normal;
   font-size: 25px;
@@ -71,25 +68,71 @@ header {
   align-content: space-between;
   margin: 5px;
 }
-
 .header-restaurant a {
   align-self: center;
   width: 20%;
   font-size: 25px;
   color: #353535;
 }
-
 .header-restaurant h1 {
   width: 80%;
+}
+
+/*  PIED DE PAGE  */
+footer {
+  margin-top: 30px;
+  padding: 12px;
+  background-color: #353535;
+  color: white;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+footer li {
+  padding-bottom: 8px;
+}
+footer a {
+  margin-left: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.footer__page {
+  margin-top: -50px;
+  padding: 12px;
+  background-color: #353535;
+  color: white;
+}
+
+.footer__svg {
+  font-size: 12px;
+  padding-right: 12px;
+}
+
+.footer__svg2 {
+  font-size: 12px;
+  padding-right: 7px;
 }
 
 /*  FONCTIONNEMENT  */
 .fonctionnement {
   margin-top: 60px;
 }
-
 .fonctionnement h2 {
   margin-left: 20px;
+}
+.fonctionnement h3 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #353535;
+  text-decoration: none;
+}
+.fonctionnement a {
+  font-weight: bold;
+  font-size: 16px;
+  color: #353535;
+  text-decoration: none;
 }
 
 .fonctionnement-encadre {
@@ -103,7 +146,6 @@ header {
   align-content: flex-start;
   align-items: center;
 }
-
 .fonctionnement-encadre__numero {
   border-radius: 27px;
   background-color: #9356dc;
@@ -114,30 +156,14 @@ header {
   font-weight: normal;
   margin-left: -10px;
 }
-
 .fonctionnement-encadre__svg {
   padding-left: 20px;
   padding-right: 20px;
 }
-
 .fonctionnement-encadre__svg2 {
   padding-left: 20px;
   padding-right: 20px;
   color: #9356dc;
-}
-
-.fonctionnement h3 {
-  font-weight: bold;
-  font-size: 16px;
-  color: #353535;
-  text-decoration: none;
-}
-
-.fonctionnement a {
-  font-weight: bold;
-  font-size: 16px;
-  color: #353535;
-  text-decoration: none;
 }
 
 /*  RESTAURANTS  */
@@ -148,9 +174,19 @@ header {
   margin: 30px 1% 30px 1px;
   background-color: #f6f6f6;
 }
-
 .restaurants h2 {
   margin-left: 30px;
+}
+.restaurants h3 {
+  font-weight: bold;
+  color: #353535;
+  text-decoration-line: none;
+}
+.restaurants h4 {
+  font-size: 10px;
+  margin-top: -15px;
+  font-weight: normal;
+  color: #353535;
 }
 
 .restaurants-encadre {
@@ -162,18 +198,15 @@ header {
   border-radius: 20px 20px 20px 20px;
   margin-bottom: 20px;
 }
-
 .restaurants-encadre__flex {
   display: flex;
 }
-
 .restaurants-encadre img {
   width: 100%;
   height: 175px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
 }
-
 .restaurants-encadre__Nouveau {
   background-color: #99e2d0;
   color: #1b6150;
@@ -186,7 +219,6 @@ header {
   height: 20px;
   margin-left: -100px;
 }
-
 .restaurants-encadre__flex2 {
   display: flex;
   align-items: center;
@@ -195,24 +227,9 @@ header {
   margin-left: 15px;
   margin-right: 30px;
 }
-
-.restaurants h3 {
-  font-weight: bold;
-  color: #353535;
-  text-decoration-line: none;
-}
-
-.restaurants h4 {
-  font-size: 10px;
-  margin-top: -15px;
-  font-weight: normal;
-  color: #353535;
-}
-
 .restaurants-encadre__svg {
   font-size: 20px;
 }
-
 .restaurants-encadre__svg:hover {
   color: #9356dc;
 }
@@ -221,41 +238,34 @@ header {
 .restaurant-page {
   margin: 0px 10px 0px 5px;
 }
-
 .restaurant-page img {
   width: 100%;
   max-height: 400px;
   object-fit: cover;
 }
-
 .restaurant-page__box {
   border-radius: 35px 35px 0px 0px;
   background-color: #eaeaea;
-  translate: 0px -50px;
+  transform: translate(0px, -50px);
   padding-left: 3%;
 }
-
 .restaurant-page__nom-restaurant {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-right: 20px;
 }
-
 .restaurant-page h2 {
   width: 85%;
   font-size: 35px;
 }
-
 .restaurant-page i {
   align-self: center;
   font-size: 30px;
 }
-
 .restaurant-page i:hover {
   color: #9356dc;
 }
-
 .restaurant-page__box h3 {
   margin-top: 40px;
   text-transform: uppercase;
@@ -263,7 +273,6 @@ header {
   border-bottom: #99e2d0 4px solid;
   font-size: 25px;
 }
-
 .restaurant-page__box article {
   background-color: white;
   border-radius: 10px 10px 10px 10px;
@@ -275,18 +284,15 @@ header {
   margin-right: 15px;
   margin-bottom: 15px;
 }
-
 .restaurant-page__box h4 {
   font-size: 20px;
 }
-
 .restaurant-page__box h5 {
   margin-top: -15px;
   color: grey;
   font-weight: normal;
   font-size: 15px;
 }
-
 .restaurant-page__box span {
   align-self: center;
 }
@@ -323,7 +329,6 @@ form {
   display: flex;
   flex-wrap: wrap;
 }
-
 form h1 {
   width: 100%;
 }
@@ -335,46 +340,6 @@ label {
 
 .form-input {
   margin-bottom: 15px;
-}
-
-/*  PIED DE PAGE  */
-footer {
-  margin-top: 30px;
-  padding: 12px;
-  background-color: #353535;
-  color: white;
-}
-
-.footer__page {
-  margin-top: -50px;
-  padding: 12px;
-  background-color: #353535;
-  color: white;
-}
-
-footer ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-footer li {
-  padding-bottom: 8px;
-}
-
-footer a {
-  margin-left: 0;
-  color: white;
-  text-decoration: none;
-}
-
-.footer__svg {
-  font-size: 12px;
-  padding-right: 12px;
-}
-
-.footer__svg2 {
-  font-size: 12px;
-  padding-right: 7px;
 }
 
 @media only screen and (min-width: 710px) {
@@ -432,7 +397,6 @@ footer a {
     padding-left: 10px;
     border-left: black 2px solid;
   }
-
   .restaurant-page_panier h2 {
     margin-top: 40px;
     text-transform: uppercase;
