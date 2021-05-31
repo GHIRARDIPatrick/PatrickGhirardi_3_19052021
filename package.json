@@ -1,10 +1,10 @@
 {
-    "name": "writting-sass",
+    "name": "writing-sass",
     "version": "1.0.0",
     "description": "OpenClassRoom - Projet 3 - OhMyFood",
     "main": "index.js",
     "scripts": {
-        "sass": "sass --watch ./sass/main.scss:style.css"
+        "sass": "sass --watch main.scss:style.css"
     },
     "repository": {
         "type": "git",
