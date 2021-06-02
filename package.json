@@ -1,0 +1,21 @@
+{
+    "name": "writing-sass",
+    "version": "1.0.0",
+    "description": "OpenClassRoom - Projet 3 - OhMyFood",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch main.scss:style.css  -w --style compressed",
+        "prefix": "postcss style.css --use autoprefixer -d ./prefixed/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GHIRARDIPatrick/PatrickGhirardi_3_19052021.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "browserslist": "last 4 versions",
+    "bugs": {
+        "url": "https://github.com/GHIRARDIPatrick/PatrickGhirardi_3_19052021/issues"
+    },
+    "homepage": "https://github.com/GHIRARDIPatrick/PatrickGhirardi_3_19052021#readme"
+}

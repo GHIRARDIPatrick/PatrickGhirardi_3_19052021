@@ -1,0 +1,21 @@
+/* GENERAL */
+
+.font_enseigne {
+    font-family: 'Shrikhand', cursive;
+}
+
+
+/*  Plan Général Page  */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    max-width: 681px;
+    margin: auto;
+    border: solid 2px green;
+    /* Couleur VERTE pour Mobile */
+}
+
+a:link {
+    text-decoration: none;
+}

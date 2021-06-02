@@ -1,0 +1,59 @@
+/*  ENTETE  */
+
+header {
+    text-align: center;
+}
+
+.header-lieu {
+    border-top: $couleur-pied-de-page solid 5px;
+    background-color: $couleur_map;
+    height: 30px;
+    flex-direction: row;
+    padding-top: 10px;
+    font-weight: bold;
+    color: $couleur-pied-de-page;
+    & i {
+        padding-right: 20px;
+    }
+}
+
+.header-texte {
+    background-color: $couleur-restaurant;
+    height: 300px;
+    &__H2 {
+        font-weight: bold;
+        font-size: 30px;
+    }
+    &__H3 {
+        font-weight: normal;
+        font-size: 25px;
+        color: $couleur-pied-de-page;
+        margin-bottom: 60px;
+    }
+}
+
+.header-bouton_explorer {
+    box-shadow: 4px 4px $couleur_map;
+    border-radius: 25px;
+    background: linear-gradient($couleur-secondaire, $couleur-primaire);
+    padding: 20px;
+    text-decoration: none;
+    color: $couleur-texte-fond;
+    font-weight: bold;
+}
+
+.header-restaurant {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    margin: 5px;
+    & a {
+        align-self: center;
+        width: 20%;
+        font-size: 25px;
+        color: $couleur-pied-de-page;
+    }
+    & h1 {
+        width: 80%;
+    }
+}

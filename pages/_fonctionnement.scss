@@ -1,0 +1,51 @@
+/*  FONCTIONNEMENT  */
+
+.fonctionnement {
+    margin-top: 60px;
+    & h2 {
+        margin-left: 20px;
+    }
+    & h3 {
+        font-weight: bold;
+        font-size: 16px;
+        color: $couleur-pied-de-page;
+        text-decoration: none;
+    }
+    & a {
+        font-weight: bold;
+        font-size: 16px;
+        color: $couleur-pied-de-page;
+        text-decoration: none;
+    }
+}
+
+.fonctionnement-encadre {
+    height: 70px;
+    margin: 25px;
+    background-color: $couleur-restaurant;
+    border-radius: 25px;
+    box-shadow: 4px 4px $couleur_map;
+    filter: drop-shadow(4px 4px 4px $couleur_map);
+    display: flex;
+    align-content: flex-start;
+    align-items: center;
+    &__numero {
+        border-radius: 27px;
+        background-color: $couleur-primaire;
+        padding: 7px 10px;
+        font-size: 11px;
+        text-decoration: none;
+        color: $couleur-texte-fond;
+        font-weight: normal;
+        margin-left: -10px;
+    }
+    &__svg {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    &__svg2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        color: $couleur-primaire;
+    }
+}
