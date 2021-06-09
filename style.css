@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* COULEURS */
+/* ANIMATIONS PAGE RESTAURANT */
 /* GENERAL */
 .font_enseigne {
   font-family: "Shrikhand", cursive;
@@ -262,7 +264,13 @@ footer a {
   font-size: 30px;
 }
 .restaurant-page i:hover {
-  color: #9356dc;
+  color: red;
+  animation: coeur-battement 1000ms 10ms linear infinite;
+}
+.restaurant-page i:active {
+  background-image: url(images/heart-solid.svg);
+  animation: coeur 1000ms 10ms linear infinite;
+  opacity: 0;
 }
 .restaurant-page__box h3 {
   margin-top: 40px;
@@ -271,16 +279,45 @@ footer a {
   border-bottom: #99e2d0 4px solid;
   font-size: 25px;
 }
-.restaurant-page__box article {
-  background-color: white;
-  border-radius: 10px 10px 10px 10px;
-  box-shadow: 5px 5px #f6f6f6;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0px 10px 0px 10px;
-  margin-right: 15px;
-  margin-bottom: 15px;
+.restaurant-page__box--1 {
+  animation: affichage-plat;
+  animation-duration: 500ms;
+  animation-delay: 300ms;
+  animation-timing-function: ease-in;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.restaurant-page__box--2 {
+  animation: affichage-plat;
+  animation-duration: 500ms;
+  animation-delay: 600ms;
+  animation-timing-function: ease-in;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.restaurant-page__box--3 {
+  animation: affichage-plat;
+  animation-duration: 500ms;
+  animation-delay: 900ms;
+  animation-timing-function: ease-in;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.restaurant-page__box--4 {
+  animation: affichage-plat;
+  animation-duration: 500ms;
+  animation-delay: 1200ms;
+  animation-timing-function: ease-in;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+.restaurant-page__box--5 {
+  animation: affichage-plat;
+  animation-duration: 500ms;
+  animation-delay: 1500ms;
+  animation-timing-function: ease-in;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 .restaurant-page__box h4 {
   font-size: 20px;
@@ -293,6 +330,10 @@ footer a {
 }
 .restaurant-page__box span {
   align-self: center;
+}
+
+.restaurant-page_panier {
+  display: none;
 }
 
 .article__bouton_box {
@@ -312,10 +353,54 @@ footer a {
   font-weight: bold;
 }
 
-.restaurant-page_panier {
-  display: none;
+.box, .restaurant-page__box article, .restaurant-page__box--1, .restaurant-page__box--2, .restaurant-page__box--3, .restaurant-page__box--4, .restaurant-page__box--5 {
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 5px 5px #f6f6f6;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 10px 0px 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
+@keyframes coeur {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    animation-fill-mode: backwards;
+  }
+}
+@keyframes coeur-battement {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes affichage-plat {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 /*  QUESTIONNAIRE - PROPOSITION  */
 form {
   margin-top: 10px;
