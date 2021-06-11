@@ -56,3 +56,19 @@ header {
         width: 80%;
     }
 }
+
+.en-attente {
+    animation: en-attente-animation;
+    animation-duration: $anim-duree*5;
+    animation-delay: $anim-duree*.3;
+    animation-timing-function: ease-in;
+    // animation-fill-mode: forwards;
+}
+
+@keyframes en-attente-animation {
+    0% {}
+    85% {
+        background-color: red;
+    }
+    100% {}
+}

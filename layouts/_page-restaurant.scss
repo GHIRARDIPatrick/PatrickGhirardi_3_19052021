@@ -4,7 +4,7 @@
     margin: 0px 10px 0px 5px;
     & img {
         width: 100%;
-        max-height: 400px;
+        height: 80px;
         object-fit: cover;
     }
     &__box {
@@ -33,7 +33,7 @@
         &:active {
             background-image: url(images/heart-solid.svg);
             background-repeat: no-repeat;
-            animation: coeur $anim-duree $anim-delai linear infinite;
+            animation: coeur $anim-duree*3 $anim-delai linear forwards;
             opacity: 0;
         }
     }
@@ -47,7 +47,7 @@
     &__box article {
         @extend .box;
     }
-    @for $i from 1 through 5 {
+    @for $i from 1 through 10 {
         &__box--#{$i} {
             @extend .box;
             animation: affichage-plat;
@@ -57,7 +57,7 @@
             opacity: 0;
             animation-fill-mode: forwards;
             &:active {
-                @extend .box-coche-validation--2;
+                @extend .box-coche-validation--animation;
             }
         }
     }
@@ -72,16 +72,21 @@
         font-size: 15px;
         @extend .overflow;
     }
-    &__box span {
+    &__plat {
+        width: 180%;
+        @extend .overflow;
+    }
+    &__prix {
         align-self: center;
+        position: absolute;
+        right: 20px;
+    }
+    &_panier {
+        display: none;
     }
 }
 
-.restaurant-page_panier {
-    display: none;
-}
-
-.article__bouton_box {
+.restaurant-page .article__bouton_box {
     width: 95%;
     height: 80px;
     padding-top: 50px;
@@ -98,74 +103,18 @@
     font-weight: bold;
 }
 
-.restaurant-page__plat {
-    width: 70%;
-    @extend .overflow;
-}
-
 .overflow {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
 
-.box {
-    background-color: white;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 5px 5px $couleur-restaurant;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 10px 0px 10px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-
-.box-coche-validation {
-    display: flex;
-    color: white;
-    font-size: 30px;
-    align-items: center;
-    padding-left: (100%-$reduction-box)*.5;
-    background-color: $couleur-tertiaire;
-    box-shadow: 5px 5px lighten($couleur-tertiaire, 10);
-    border: solid 2px lighten($couleur-tertiaire, 10);
-    height: auto;
-    width: 100%-$reduction-box;
-    border-radius: 0px 10px 10px 0px;
-    transform: translate(12px, 0px);
-    opacity: 0;
-    display: none;
-    &--2 {
-        &>.box-coche-validation {
-            display: flex;
-            animation: box-coche-validation2 1000ms 50ms infinite ease-in;
-            animation-fill-mode: backwards;
-            z-index: 99;
-        }
-    }
-}
-
-@keyframes box-coche-validation2 {
-    0% {
-        opacity: 0;
-        transform: translate(50px, 0px);
-    }
-    30% {}
-    100% {
-        opacity: 1;
-        transform: translate(12px, 0px);
-    }
-}
-
 @keyframes coeur {
     0% {
-        opacity: 1;
+        opacity: 0;
     }
     100% {
-        opacity: 0;
-        animation-fill-mode: backwards;
+        opacity: 1;
     }
 }
 
@@ -195,5 +144,126 @@
     100% {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+.box {
+    background-color: white;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 5px 5px $couleur-restaurant;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.box-coche-validation {
+    display: flex;
+    color: white;
+    font-size: 30px;
+    align-items: center;
+    padding-left: (100%-$reduction-box)*.5;
+    background-color: $couleur-tertiaire;
+    box-shadow: 5px 5px lighten($couleur-tertiaire, 10);
+    border: solid 2px lighten($couleur-tertiaire, 10);
+    height: auto;
+    width: 100%-$reduction-box;
+    border-radius: 0px 10px 10px 0px;
+    transform: translate(12px, 0px);
+    overflow: hidden;
+    opacity: 0;
+    &--animation {
+        &>.box-coche-validation {
+            animation-name: box-coche-validation2, coche-validation;
+            animation-duration: 1200ms, 500ms;
+            animation-delay: 50ms, 800ms;
+            animation-timing-function: ease-in, ease-in;
+        }
+        &>.restaurant-page__plat {
+            @extend .plat-animation;
+        }
+        &>.restaurant-page__prix {
+            @extend .prix-animation;
+        }
+    }
+}
+
+@keyframes box-coche-validation2 {
+    0% {
+        opacity: 0;
+        transform: translate(50px, 0px);
+    }
+    30% {
+        opacity: 1;
+        transform: translate(12px, 0px);
+    }
+    90% {
+        opacity: 1;
+        transform: translate(12px, 0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(50px, 0px);
+    }
+}
+
+.coche-validation {
+    color: red;
+    font-size: 30px;
+    align-items: center;
+    padding-left: (100%-$reduction-box)*.5;
+    opacity: 1;
+    animation-name: coche-validation2;
+    animation-duration: 1200ms;
+    animation-delay: 50ms;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes coche-validation2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.plat-animation {
+    animation-name: plat-animation2;
+    animation-duration: 1200ms;
+    animation-delay: 50ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes plat-animation2 {
+    0% {}
+    10% {
+        width: (100%-$reduction-box)*2.8;
+    }
+    100% {
+        width: (100%-$reduction-box)*2.8;
+    }
+}
+
+.prix-animation {
+    animation-name: prix-animation2;
+    animation-duration: 1200ms;
+    animation-delay: 50ms;
+    animation-timing-function: ease-out;
+}
+
+@keyframes prix-animation2 {
+    0% {
+        right: 20px;
+    }
+    40% {
+        width: (100%-$reduction-box)*1.7;
+    }
+    100% {
+        width: (100%-$reduction-box)*1.7;
     }
 }
