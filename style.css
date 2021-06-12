@@ -512,7 +512,7 @@ footer a {
   opacity: 1;
   animation-name: coche-validation2;
   animation-duration: 1200ms;
-  animation-delay: 50ms;
+  animation-delay: 215ms;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
 }
@@ -520,6 +520,9 @@ footer a {
 @keyframes coche-validation2 {
   0% {
     transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(360deg);
   }
   100% {
     transform: rotate(360deg);
