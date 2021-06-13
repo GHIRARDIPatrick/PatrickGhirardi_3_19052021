@@ -78,16 +78,74 @@ header {
   width: 80%;
 }
 
-.en-attente {
-  animation: en-attente-animation;
-  animation-duration: 5000ms;
-  animation-delay: 300ms;
+.loader {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 50px;
+  margin-left: 10%;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px #9356dc;
+  background-color: linear-gradient(#ff79da, #9356dc);
+  border: 2px solid linear-gradient(#ff79da, #9356dc);
+  animation: loader-animation;
+  animation-duration: 4000ms;
+  animation-delay: 10ms;
   animation-timing-function: ease-in;
+  animation-fill-mode: backwards;
 }
 
-@keyframes en-attente-animation {
+.loader--2 {
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 50px;
+  margin-left: 10%;
+  margin-top: -50px;
+  border-radius: 15px;
+  background-color: linear-gradient(#ff79da, #9356dc);
+  border: 2px solid linear-gradient(#ff79da, #9356dc);
+  transform-origin: left;
+  animation: loader-animation--2;
+  animation-duration: 2000ms;
+  animation-delay: 10ms;
+  animation-iteration-count: 2;
+  animation-timing-function: cubic-bezier(0.25, 0.25, 1);
+  animation-fill-mode: backwards;
+}
+
+.loader_H1 {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+  }
   85% {
-    background-color: red;
+    background-color: #9356dc;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader-animation--2 {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    background-color: #9356dc;
+  }
+  65% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100% {
+    opacity: 0;
   }
 }
 /*  PIED DE PAGE  */
@@ -129,7 +187,7 @@ footer a {
 
 /*  FONCTIONNEMENT  */
 .fonctionnement {
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .fonctionnement h2 {
   margin-left: 20px;
@@ -626,7 +684,7 @@ label {
 
   .restaurants {
     width: 60%;
-    margin-top: 60px;
+    margin-top: 20px;
   }
 
   .restaurant-page_menu {
