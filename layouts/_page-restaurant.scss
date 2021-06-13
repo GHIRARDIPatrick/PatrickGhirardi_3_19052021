@@ -178,8 +178,8 @@
     &--animation {
         &>.box-coche-validation {
             animation-name: box-coche-validation2, coche-validation;
-            animation-duration: 1200ms, 500ms;
-            animation-delay: 50ms, 800ms;
+            animation-duration: 1200ms, 100ms;
+            animation-delay: 50ms, 50ms;
             animation-timing-function: ease-in, ease-in;
         }
         &>.restaurant-page__plat {
@@ -218,9 +218,10 @@
     opacity: 1;
     animation-name: coche-validation2;
     animation-duration: 1200ms;
-    animation-delay: 215ms;
+    animation-delay: 0ms;
     animation-timing-function: ease-out;
     animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 
 @keyframes coche-validation2 {
@@ -229,6 +230,7 @@
     }
     30% {
         transform: rotate(360deg);
+        animation-play-state: paused;
     }
     100% {
         transform: rotate(360deg);
