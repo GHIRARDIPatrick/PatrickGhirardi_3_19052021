@@ -96,6 +96,17 @@ header {
   animation-fill-mode: backwards;
 }
 
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+  }
+  85% {
+    background-color: #9356dc;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .loader--2 {
   opacity: 0;
   display: flex;
@@ -116,6 +127,31 @@ header {
   animation-fill-mode: backwards;
 }
 
+@keyframes loader-animation--2 {
+  0% {
+    opacity: 0;
+    transform: scaleX(0);
+    background-color: #ff79da;
+  }
+  35% {
+    opacity: 1;
+    transform: scaleX(1);
+    background-color: #ff79da;
+  }
+  55% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  90% {
+    opacity: 0;
+    transform: scaleX(0);
+    background-color: #9356dc;
+  }
+  100% {
+    opacity: 0;
+    background-color: white;
+  }
+}
 .loader_H1 {
   width: 100%;
   text-align: center;
@@ -123,31 +159,6 @@ header {
   color: white;
 }
 
-@keyframes loader-animation {
-  0% {
-    opacity: 1;
-  }
-  85% {
-    background-color: #9356dc;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes loader-animation--2 {
-  0% {
-    opacity: 0;
-    transform: scaleX(0);
-    background-color: #9356dc;
-  }
-  65% {
-    opacity: 1;
-    transform: scaleX(1);
-  }
-  100% {
-    opacity: 0;
-  }
-}
 /*  PIED DE PAGE  */
 footer {
   margin-top: 30px;
