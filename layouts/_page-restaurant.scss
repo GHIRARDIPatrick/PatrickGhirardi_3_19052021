@@ -177,10 +177,14 @@
     opacity: 0;
     &--animation {
         &>.box-coche-validation {
-            animation-name: box-coche-validation2, coche-validation;
-            animation-duration: 1200ms, 100ms;
-            animation-delay: 50ms, 50ms;
-            animation-timing-function: ease-in, ease-in;
+            animation-name: box-coche-validation2;
+            animation-duration: $anim-duree*2;
+            animation-delay: 50ms;
+            animation-timing-function: ease-in;
+            animation-fill-mode: forwards;
+        }
+        &>.coche-validation {
+            @extend .coche-validation;
         }
         &>.restaurant-page__plat {
             @extend .plat-animation;
@@ -194,9 +198,9 @@
 @keyframes box-coche-validation2 {
     0% {
         opacity: 0;
-        transform: translate(50px, 0px);
+        transform: translate(100px, 0px);
     }
-    30% {
+    40% {
         opacity: 1;
         transform: translate(12px, 0px);
     }
@@ -211,26 +215,26 @@
 }
 
 .coche-validation {
-    color: red;
-    font-size: 30px;
+    color: white;
+    font-size: 50px;
     align-items: center;
     padding-left: (100%-$reduction-box)*.5;
     opacity: 1;
     animation-name: coche-validation2;
-    animation-duration: 1200ms;
+    animation-duration: ($anim-duree*2);
     animation-delay: 0ms;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
-    animation-play-state: running;
+    transform: rotate(0deg);
+    transition: transform 0ms 0ms ease-in;
 }
 
 @keyframes coche-validation2 {
     0% {
         transform: rotate(0deg);
     }
-    30% {
+    20% {
         transform: rotate(360deg);
-        animation-play-state: paused;
     }
     100% {
         transform: rotate(360deg);
@@ -239,9 +243,9 @@
 
 .plat-animation {
     animation-name: plat-animation2;
-    animation-duration: 1200ms;
+    animation-duration: $anim-duree*2;
     animation-delay: 50ms;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
 }
 
 @keyframes plat-animation2 {
@@ -256,9 +260,9 @@
 
 .prix-animation {
     animation-name: prix-animation2;
-    animation-duration: 1200ms;
+    animation-duration: $anim-duree*2;
     animation-delay: 50ms;
-    animation-timing-function: ease-out;
+    animation-timing-function: ease-in;
 }
 
 @keyframes prix-animation2 {

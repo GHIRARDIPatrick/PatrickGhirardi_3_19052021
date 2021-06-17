@@ -69,9 +69,9 @@ header {
     background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
     border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
     animation: loader-animation;
-    animation-duration: 4000ms;
-    animation-delay: 10ms;
-    animation-timing-function: ease-in;
+    animation-duration: $anim-loader2-duree * $anim-loader2-nombre;
+    animation-delay: $anim-loader2-delai;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: backwards;
 }
 
@@ -79,8 +79,11 @@ header {
     0% {
         opacity: 1;
     }
-    85% {
+    50% {
         background-color: $couleur-primaire;
+    }
+    80% {
+        opacity: 1;
     }
     100% {
         opacity: 0;
@@ -98,11 +101,11 @@ header {
     border-radius: 15px;
     background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
     border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
-    transform-origin: left;
+    transform-origin: center;
     animation: loader-animation--2;
-    animation-duration: 2000ms;
-    animation-delay: 10ms;
-    animation-iteration-count: 2;
+    animation-duration: $anim-loader2-duree;
+    animation-delay: $anim-loader2-delai;
+    animation-iteration-count: $anim-loader2-nombre;
     animation-timing-function: cubic-bezier(.25, 0.25, 1);
     animation-fill-mode: backwards;
 }

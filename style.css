@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* COULEURS */
 /* ANIMATIONS PAGE RESTAURANT */
+/* ANIMATIONS PAGE RESTAURANT */
 /* GENERAL */
 .font_enseigne {
   font-family: "Shrikhand", cursive;
@@ -90,9 +91,9 @@ header {
   background-color: linear-gradient(#ff79da, #9356dc);
   border: 2px solid linear-gradient(#ff79da, #9356dc);
   animation: loader-animation;
-  animation-duration: 4000ms;
+  animation-duration: 4800ms;
   animation-delay: 10ms;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
 }
 
@@ -100,8 +101,11 @@ header {
   0% {
     opacity: 1;
   }
-  85% {
+  50% {
     background-color: #9356dc;
+  }
+  80% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
@@ -118,11 +122,11 @@ header {
   border-radius: 15px;
   background-color: linear-gradient(#ff79da, #9356dc);
   border: 2px solid linear-gradient(#ff79da, #9356dc);
-  transform-origin: left;
+  transform-origin: center;
   animation: loader-animation--2;
-  animation-duration: 2000ms;
+  animation-duration: 1200ms;
   animation-delay: 10ms;
-  animation-iteration-count: 2;
+  animation-iteration-count: 4;
   animation-timing-function: cubic-bezier(0.25, 0.25, 1);
   animation-fill-mode: backwards;
 }
@@ -346,12 +350,12 @@ footer a {
 }
 .restaurant-page_coeur:hover {
   color: red;
-  animation: coeur-battement 1000ms 10ms linear infinite;
+  animation: coeur-battement 1200ms 10ms linear infinite;
 }
 .restaurant-page_coeur:active {
   background-image: url(images/heart-solid.svg);
   background-repeat: no-repeat;
-  animation: coeur 3000ms 10ms linear forwards;
+  animation: coeur 3600ms 10ms linear forwards;
   opacity: 0;
 }
 .restaurant-page__box h3 {
@@ -363,80 +367,80 @@ footer a {
 }
 .restaurant-page__box--1 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 300ms;
+  animation-duration: 600ms;
+  animation-delay: 360ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--2 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 600ms;
+  animation-duration: 600ms;
+  animation-delay: 720ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--3 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 900ms;
+  animation-duration: 600ms;
+  animation-delay: 1080ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--4 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 1200ms;
+  animation-duration: 600ms;
+  animation-delay: 1440ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--5 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 1500ms;
+  animation-duration: 600ms;
+  animation-delay: 1800ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--6 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 1800ms;
+  animation-duration: 600ms;
+  animation-delay: 2160ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--7 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 2100ms;
+  animation-duration: 600ms;
+  animation-delay: 2520ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--8 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 2400ms;
+  animation-duration: 600ms;
+  animation-delay: 2880ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--9 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 2700ms;
+  animation-duration: 600ms;
+  animation-delay: 3240ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
 }
 .restaurant-page__box--10 {
   animation: affichage-plat;
-  animation-duration: 500ms;
-  animation-delay: 3000ms;
+  animation-duration: 600ms;
+  animation-delay: 3600ms;
   animation-timing-function: ease-in;
   opacity: 0;
   animation-fill-mode: forwards;
@@ -550,17 +554,18 @@ footer a {
   opacity: 0;
 }
 .box-coche-validation--animation > .box-coche-validation, .restaurant-page__box--1:active > .box-coche-validation, .restaurant-page__box--2:active > .box-coche-validation, .restaurant-page__box--3:active > .box-coche-validation, .restaurant-page__box--4:active > .box-coche-validation, .restaurant-page__box--5:active > .box-coche-validation, .restaurant-page__box--6:active > .box-coche-validation, .restaurant-page__box--7:active > .box-coche-validation, .restaurant-page__box--8:active > .box-coche-validation, .restaurant-page__box--9:active > .box-coche-validation, .restaurant-page__box--10:active > .box-coche-validation {
-  animation-name: box-coche-validation2, coche-validation;
-  animation-duration: 1200ms, 100ms;
-  animation-delay: 50ms, 50ms;
-  animation-timing-function: ease-in, ease-in;
+  animation-name: box-coche-validation2;
+  animation-duration: 2400ms;
+  animation-delay: 50ms;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 @keyframes box-coche-validation2 {
   0% {
     opacity: 0;
-    transform: translate(50px, 0px);
+    transform: translate(100px, 0px);
   }
-  30% {
+  40% {
     opacity: 1;
     transform: translate(12px, 0px);
   }
@@ -573,27 +578,27 @@ footer a {
     transform: translate(50px, 0px);
   }
 }
-.coche-validation {
-  color: red;
-  font-size: 30px;
+.coche-validation, .box-coche-validation--animation > .coche-validation, .restaurant-page__box--1:active > .coche-validation, .restaurant-page__box--2:active > .coche-validation, .restaurant-page__box--3:active > .coche-validation, .restaurant-page__box--4:active > .coche-validation, .restaurant-page__box--5:active > .coche-validation, .restaurant-page__box--6:active > .coche-validation, .restaurant-page__box--7:active > .coche-validation, .restaurant-page__box--8:active > .coche-validation, .restaurant-page__box--9:active > .coche-validation, .restaurant-page__box--10:active > .coche-validation {
+  color: white;
+  font-size: 50px;
   align-items: center;
   padding-left: 10%;
   opacity: 1;
   animation-name: coche-validation2;
-  animation-duration: 1200ms;
+  animation-duration: 2400ms;
   animation-delay: 0ms;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
-  animation-play-state: running;
+  transform: rotate(0deg);
+  transition: transform 0ms 0ms ease-in;
 }
 
 @keyframes coche-validation2 {
   0% {
     transform: rotate(0deg);
   }
-  30% {
+  20% {
     transform: rotate(360deg);
-    animation-play-state: paused;
   }
   100% {
     transform: rotate(360deg);
@@ -601,9 +606,9 @@ footer a {
 }
 .plat-animation, .box-coche-validation--animation > .restaurant-page__plat, .restaurant-page__box--1:active > .restaurant-page__plat, .restaurant-page__box--2:active > .restaurant-page__plat, .restaurant-page__box--3:active > .restaurant-page__plat, .restaurant-page__box--4:active > .restaurant-page__plat, .restaurant-page__box--5:active > .restaurant-page__plat, .restaurant-page__box--6:active > .restaurant-page__plat, .restaurant-page__box--7:active > .restaurant-page__plat, .restaurant-page__box--8:active > .restaurant-page__plat, .restaurant-page__box--9:active > .restaurant-page__plat, .restaurant-page__box--10:active > .restaurant-page__plat {
   animation-name: plat-animation2;
-  animation-duration: 1200ms;
+  animation-duration: 2400ms;
   animation-delay: 50ms;
-  animation-timing-function: ease-out;
+  animation-timing-function: linear;
 }
 
 @keyframes plat-animation2 {
@@ -616,9 +621,9 @@ footer a {
 }
 .prix-animation, .box-coche-validation--animation > .restaurant-page__prix, .restaurant-page__box--1:active > .restaurant-page__prix, .restaurant-page__box--2:active > .restaurant-page__prix, .restaurant-page__box--3:active > .restaurant-page__prix, .restaurant-page__box--4:active > .restaurant-page__prix, .restaurant-page__box--5:active > .restaurant-page__prix, .restaurant-page__box--6:active > .restaurant-page__prix, .restaurant-page__box--7:active > .restaurant-page__prix, .restaurant-page__box--8:active > .restaurant-page__prix, .restaurant-page__box--9:active > .restaurant-page__prix, .restaurant-page__box--10:active > .restaurant-page__prix {
   animation-name: prix-animation2;
-  animation-duration: 1200ms;
+  animation-duration: 2400ms;
   animation-delay: 50ms;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
 }
 
 @keyframes prix-animation2 {
