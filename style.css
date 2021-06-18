@@ -13,8 +13,6 @@ body {
   font-style: normal;
   max-width: 681px;
   margin: auto;
-  border: solid 2px green;
-  /* Couleur VERTE pour Mobile */
 }
 
 a:link {
@@ -674,7 +672,6 @@ label {
     /* Plan Général Page */
     width: 95%;
     max-width: 1200px;
-    border: solid 2px violet;
   }
 
   .accueil_flex-grand-ecran {
