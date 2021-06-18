@@ -20,12 +20,14 @@ header {
     background-color: $couleur-restaurant;
     height: 300px;
     &__H2 {
+        padding-left: 30px;
+        padding-right: 30px;
         font-weight: bold;
         font-size: 30px;
     }
     &__H3 {
         font-weight: normal;
-        font-size: 25px;
+        font-size: 20px;
         color: $couleur-pied-de-page;
         margin-bottom: 60px;
     }
@@ -62,7 +64,7 @@ header {
     display: flex;
     flex-direction: row;
     width: 80%;
-    height: 50px;
+    height: 25px;
     margin-left: 10%;
     border-radius: 15px;
     box-shadow: 10px 10px 5px $couleur-primaire;
@@ -95,10 +97,11 @@ header {
     display: flex;
     flex-direction: row;
     width: 80%;
-    height: 50px;
+    height: 25px;
     margin-left: 10%;
-    margin-top: -50px;
+    margin-top: -25px;
     border-radius: 15px;
+    box-shadow: 10px 10px 5px $couleur-primaire;
     background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
     border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
     transform-origin: center;
@@ -120,6 +123,7 @@ header {
         opacity: 1;
         transform: scaleX(1);
         background-color: $couleur-secondaire;
+        box-shadow: 10px 10px 5px $couleur-secondaire;
     }
     55% {
         opacity: 1;
@@ -129,6 +133,7 @@ header {
         opacity: 0;
         transform: scaleX(0);
         background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
     }
     100% {
         opacity: 0;
@@ -139,6 +144,6 @@ header {
 .loader_H1 {
     width: 100%;
     text-align: center;
-    font-size: 35px;
+    font-size: 17px;
     color: white;
 }

@@ -10,7 +10,7 @@
 /*  Plan Général Page  */
 body {
   font-family: "Roboto", sans-serif;
-  font-style: italic;
+  font-style: normal;
   max-width: 681px;
   margin: auto;
   border: solid 2px green;
@@ -43,12 +43,14 @@ header {
   height: 300px;
 }
 .header-texte__H2 {
+  padding-left: 30px;
+  padding-right: 30px;
   font-weight: bold;
   font-size: 30px;
 }
 .header-texte__H3 {
   font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   color: #353535;
   margin-bottom: 60px;
 }
@@ -84,7 +86,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 80%;
-  height: 50px;
+  height: 25px;
   margin-left: 10%;
   border-radius: 15px;
   box-shadow: 10px 10px 5px #9356dc;
@@ -116,10 +118,11 @@ header {
   display: flex;
   flex-direction: row;
   width: 80%;
-  height: 50px;
+  height: 25px;
   margin-left: 10%;
-  margin-top: -50px;
+  margin-top: -25px;
   border-radius: 15px;
+  box-shadow: 10px 10px 5px #9356dc;
   background-color: linear-gradient(#ff79da, #9356dc);
   border: 2px solid linear-gradient(#ff79da, #9356dc);
   transform-origin: center;
@@ -141,6 +144,7 @@ header {
     opacity: 1;
     transform: scaleX(1);
     background-color: #ff79da;
+    box-shadow: 10px 10px 5px #ff79da;
   }
   55% {
     opacity: 1;
@@ -150,6 +154,7 @@ header {
     opacity: 0;
     transform: scaleX(0);
     background-color: #9356dc;
+    box-shadow: 10px 10px 5px #9356dc;
   }
   100% {
     opacity: 0;
@@ -159,7 +164,7 @@ header {
 .loader_H1 {
   width: 100%;
   text-align: center;
-  font-size: 35px;
+  font-size: 17px;
   color: white;
 }
 
@@ -355,7 +360,7 @@ footer a {
 .restaurant-page_coeur:active {
   background-image: url(images/heart-solid.svg);
   background-repeat: no-repeat;
-  animation: coeur 3600ms 10ms linear forwards;
+  animation: coeur 3600ms 100ms linear forwards;
   opacity: 0;
 }
 .restaurant-page__box h3 {
@@ -462,6 +467,11 @@ footer a {
   position: absolute;
   right: 20px;
 }
+.restaurant-page__prix--2 {
+  align-self: center;
+  position: absolute;
+  right: 80px;
+}
 .restaurant-page_panier {
   display: none;
 }
@@ -555,7 +565,7 @@ footer a {
 }
 .box-coche-validation--animation > .box-coche-validation, .restaurant-page__box--1:active > .box-coche-validation, .restaurant-page__box--2:active > .box-coche-validation, .restaurant-page__box--3:active > .box-coche-validation, .restaurant-page__box--4:active > .box-coche-validation, .restaurant-page__box--5:active > .box-coche-validation, .restaurant-page__box--6:active > .box-coche-validation, .restaurant-page__box--7:active > .box-coche-validation, .restaurant-page__box--8:active > .box-coche-validation, .restaurant-page__box--9:active > .box-coche-validation, .restaurant-page__box--10:active > .box-coche-validation {
   animation-name: box-coche-validation2;
-  animation-duration: 2400ms;
+  animation-duration: 1800ms;
   animation-delay: 50ms;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
@@ -589,15 +599,13 @@ footer a {
   animation-delay: 0ms;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  transform: rotate(0deg);
-  transition: transform 0ms 0ms ease-in;
 }
 
 @keyframes coche-validation2 {
   0% {
     transform: rotate(0deg);
   }
-  20% {
+  40% {
     transform: rotate(360deg);
   }
   100% {
@@ -721,6 +729,18 @@ label {
     text-transform: uppercase;
     width: 60px;
     border-bottom: #99e2d0 4px solid;
+  }
+
+  .loader {
+    height: 50px;
+  }
+
+  .loader--2 {
+    height: 50px;
+  }
+
+  .loader_H1 {
+    font-size: 35px;
   }
 }
 

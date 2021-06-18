@@ -33,7 +33,7 @@
         &:active {
             background-image: url(images/heart-solid.svg);
             background-repeat: no-repeat;
-            animation: coeur $anim-duree*3 $anim-delai linear forwards;
+            animation: coeur $anim-duree*3 $anim-delai*10 linear forwards;
             opacity: 0;
         }
     }
@@ -80,6 +80,11 @@
         align-self: center;
         position: absolute;
         right: 20px;
+        &--2 {
+            align-self: center;
+            position: absolute;
+            right: 80px;
+        }
     }
     &_panier {
         display: none;
@@ -178,7 +183,7 @@
     &--animation {
         &>.box-coche-validation {
             animation-name: box-coche-validation2;
-            animation-duration: $anim-duree*2;
+            animation-duration: $anim-duree*1.5;
             animation-delay: 50ms;
             animation-timing-function: ease-in;
             animation-fill-mode: forwards;
@@ -225,15 +230,13 @@
     animation-delay: 0ms;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    transform: rotate(0deg);
-    transition: transform 0ms 0ms ease-in;
 }
 
 @keyframes coche-validation2 {
     0% {
         transform: rotate(0deg);
     }
-    20% {
+    40% {
         transform: rotate(360deg);
     }
     100% {
