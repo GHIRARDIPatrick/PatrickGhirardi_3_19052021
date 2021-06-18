@@ -20,12 +20,14 @@ header {
     background-color: $couleur-restaurant;
     height: 300px;
     &__H2 {
+        padding-left: 30px;
+        padding-right: 30px;
         font-weight: bold;
         font-size: 30px;
     }
     &__H3 {
         font-weight: normal;
-        font-size: 25px;
+        font-size: 20px;
         color: $couleur-pied-de-page;
         margin-bottom: 60px;
     }
@@ -55,4 +57,93 @@ header {
     & h1 {
         width: 80%;
     }
+}
+
+.loader {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px $couleur-primaire;
+    background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
+    border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
+    animation: loader-animation;
+    animation-duration: $anim-loader2-duree * $anim-loader2-nombre;
+    animation-delay: $anim-loader2-delai;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes loader-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        background-color: $couleur-primaire;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.loader--2 {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    margin-top: -25px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px $couleur-primaire;
+    background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
+    border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
+    transform-origin: center;
+    animation: loader-animation--2;
+    animation-duration: $anim-loader2-duree;
+    animation-delay: $anim-loader2-delai;
+    animation-iteration-count: $anim-loader2-nombre;
+    animation-timing-function: cubic-bezier(.25, 0.25, 1);
+    animation-fill-mode: backwards;
+}
+
+@keyframes loader-animation--2 {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+        background-color: $couleur-secondaire;
+    }
+    35% {
+        opacity: 1;
+        transform: scaleX(1);
+        background-color: $couleur-secondaire;
+        box-shadow: 10px 10px 5px $couleur-secondaire;
+    }
+    55% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    90% {
+        opacity: 0;
+        transform: scaleX(0);
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
+    }
+    100% {
+        opacity: 0;
+        background-color: white;
+    }
+}
+
+.loader_H1 {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    color: white;
 }

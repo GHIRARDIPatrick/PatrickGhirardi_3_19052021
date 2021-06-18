@@ -1,53 +1,62 @@
-@media only screen and (min-width: 710px) {
-    body {
-        /* Plan Général Page */
-        width: 95%;
-        max-width: 1200px;
-        border: solid 2px violet;
-    }
-    .accueil_flex-grand-ecran {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-content: space-between;
-    }
-    .restaurant-page_flex-grand-ecran {
-        display: flex;
-        flex-direction: row;
-        align-content: space-between;
-    }
-    .header__texte {
-        height: 90px;
-    }
-    .header__bouton_explorer {
-        display: none;
-    }
-    .restaurant-page img {
-        height: 400px;
-    }
-    .fonctionnement {
-        width: 37%;
-    }
-    .restaurants {
-        width: 60%;
-        margin-top: 60px;
-    }
-    .restaurant-page_menu {
-        width: 60%;
-    }
-    .restaurant-page_panier {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        width: 35%;
-        height: 100%;
-        padding-left: 10px;
-        border-left: $couleur-separateur 2px solid;
-        & h2 {
-            margin-top: 40px;
-            text-transform: uppercase;
-            width: 60px;
-            border-bottom: $couleur-tertiaire 4px solid;
+    @media only screen and (min-width: 710px) {
+        body {
+            /* Plan Général Page */
+            width: 95%;
+            max-width: 1200px;
+            border: solid 2px violet;
+        }
+        .accueil_flex-grand-ecran {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+        .restaurant-page_flex-grand-ecran {
+            display: flex;
+            flex-direction: row;
+            align-content: space-between;
+        }
+        .header__texte {
+            height: 90px;
+        }
+        .header__bouton_explorer {
+            display: none;
+        }
+        .restaurant-page img {
+            height: 400px;
+        }
+        .fonctionnement {
+            width: 37%;
+        }
+        .restaurants {
+            width: 60%;
+            margin-top: 20px;
+        }
+        .restaurant-page_menu {
+            width: 60%;
+        }
+        .restaurant-page_panier {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 35%;
+            height: 100%;
+            padding-left: 10px;
+            border-left: $couleur-separateur 2px solid;
+            & h2 {
+                margin-top: 40px;
+                text-transform: uppercase;
+                width: 60px;
+                border-bottom: $couleur-tertiaire 4px solid;
+            }
+        }
+        .loader {
+            height: 50px;
+        }
+        .loader--2 {
+            height: 50px;
+        }
+        .loader_H1 {
+            font-size: 35px;
         }
     }
-}
