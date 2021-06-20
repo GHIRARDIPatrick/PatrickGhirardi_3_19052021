@@ -5,7 +5,8 @@ header {
 }
 
 .header-lieu {
-    border-top: $couleur-pied-de-page solid 5px;
+    border-top: darken($couleur_map, 15%) solid 5px;
+    box-shadow: inset 0px 5px darken($couleur_map, 5%);
     background-color: $couleur_map;
     height: 30px;
     padding-top: 10px;
@@ -26,6 +27,8 @@ header {
         font-size: 30px;
     }
     &__H3 {
+        padding-left: 15px;
+        padding-right: 15px;
         font-weight: normal;
         font-size: 20px;
         color: $couleur-pied-de-page;
@@ -67,9 +70,7 @@ header {
     height: 25px;
     margin-left: 10%;
     border-radius: 15px;
-    box-shadow: 10px 10px 5px $couleur-primaire;
-    background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
-    border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
+    background-color: white;
     animation: loader-animation;
     animation-duration: $anim-loader2-duree * $anim-loader2-nombre;
     animation-delay: $anim-loader2-delai;
@@ -83,6 +84,7 @@ header {
     }
     50% {
         background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
     }
     80% {
         opacity: 1;
@@ -101,15 +103,13 @@ header {
     margin-left: 10%;
     margin-top: -25px;
     border-radius: 15px;
-    box-shadow: 10px 10px 5px $couleur-primaire;
-    background-color: linear-gradient($couleur-secondaire, $couleur-primaire);
-    border: 2px solid linear-gradient($couleur-secondaire, $couleur-primaire);
+    background-color: white;
     transform-origin: center;
     animation: loader-animation--2;
     animation-duration: $anim-loader2-duree;
     animation-delay: $anim-loader2-delai;
     animation-iteration-count: $anim-loader2-nombre;
-    animation-timing-function: cubic-bezier(.25, 0.25, 1);
+    animation-timing-function: ease-in;
     animation-fill-mode: backwards;
 }
 
@@ -117,7 +117,8 @@ header {
     0% {
         opacity: 0;
         transform: scaleX(0);
-        background-color: $couleur-secondaire;
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
     }
     35% {
         opacity: 1;
