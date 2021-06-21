@@ -27,13 +27,10 @@
         align-self: center;
         font-size: 30px;
         &:hover {
-            color: $couleur-coeur;
-            animation: coeur-battement $anim-duree $anim-delai linear infinite;
-        }
-        &:active {
             background-image: url(images/heart-solid.svg);
             background-repeat: no-repeat;
             animation: coeur $anim-duree*3 $anim-delai*10 linear forwards;
+            color: $couleur-primaire;
             opacity: 0;
         }
     }
@@ -56,7 +53,7 @@
             animation-timing-function: ease-in;
             opacity: 0;
             animation-fill-mode: forwards;
-            &:active {
+            &:hover {
                 @extend .box-coche-validation--animation;
             }
         }
@@ -123,24 +120,23 @@
     }
 }
 
-@keyframes coeur-battement {
-    0% {
-        transform: scale(1.0);
-    }
-    25% {
-        transform: scale(1.2);
-    }
-    50% {
-        transform: scale(1.0);
-    }
-    75% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1.0);
-    }
-}
-
+// @keyframes coeur-battement {
+//     0% {
+//         transform: scale(1.0);
+//     }
+//     25% {
+//         transform: scale(1.2);
+//     }
+//     50% {
+//         transform: scale(1.0);
+//     }
+//     75% {
+//         transform: scale(1.2);
+//     }
+//     100% {
+//         transform: scale(1.0);
+//     }
+// }
 @keyframes affichage-plat {
     0% {
         opacity: 0;
@@ -203,20 +199,21 @@
 @keyframes box-coche-validation2 {
     0% {
         opacity: 0;
-        transform: translate(100px, 0px);
+        transform: translate(150px, 0px);
     }
     40% {
         opacity: 1;
         transform: translate(12px, 0px);
     }
-    90% {
+    100% {
         opacity: 1;
         transform: translate(12px, 0px);
+        animation-fill-mode: forwards;
     }
-    100% {
-        opacity: 0;
-        transform: translate(50px, 0px);
-    }
+    // 100% {
+    //     opacity: 0;
+    //     transform: translate(50px, 0px);
+    // }
 }
 
 .coche-validation {
@@ -230,6 +227,7 @@
     animation-delay: 0ms;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
 }
 
 @keyframes coche-validation2 {
@@ -249,6 +247,7 @@
     animation-duration: $anim-duree*2;
     animation-delay: 50ms;
     animation-timing-function: linear;
+    animation-fill-mode: forwards;
 }
 
 @keyframes plat-animation2 {
@@ -266,6 +265,7 @@
     animation-duration: $anim-duree*2;
     animation-delay: 50ms;
     animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
 }
 
 @keyframes prix-animation2 {

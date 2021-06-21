@@ -1,0 +1,117 @@
+.loader-bloc {
+    animation: loader-bloc-animation;
+    animation-duration: $anim-loader2-duree * ($anim-loader2-nombre+1);
+    animation-delay: $anim-loader2-delai;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes loader-bloc-animation {
+    0% {
+        width: 100%;
+        height: 100%;
+        margin-top: 20%;
+        margin-bottom: 130%;
+        opacity: 1;
+    }
+    80% {
+        width: 100%;
+        height: 100%;
+        margin-top: 20%;
+        margin-bottom: 80%;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 0%;
+        height: 0%;
+        margin-top: -10%;
+        margin-bottom: -10%;
+    }
+}
+
+.loader {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    border-radius: 15px;
+    background-color: white;
+    animation: loader-animation;
+    animation-duration: $anim-loader2-duree * $anim-loader2-nombre;
+    animation-delay: $anim-loader2-delai;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes loader-animation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.loader--2 {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 25px;
+    margin-left: 10%;
+    border-radius: 15px;
+    background-color: white;
+    transform-origin: center;
+    animation: loader-animation--2;
+    animation-duration: $anim-loader2-duree;
+    animation-delay: $anim-loader2-delai;
+    animation-iteration-count: $anim-loader2-nombre;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+}
+
+@keyframes loader-animation--2 {
+    0% {
+        opacity: 0;
+        transform: scaleX(0);
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
+    }
+    35% {
+        opacity: 1;
+        transform: scaleX(1);
+        background-color: $couleur-secondaire;
+        box-shadow: 10px 10px 5px $couleur-secondaire;
+    }
+    55% {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+    90% {
+        opacity: 0;
+        transform: scaleX(0);
+        background-color: $couleur-primaire;
+        box-shadow: 10px 10px 5px $couleur-primaire;
+    }
+    100% {
+        opacity: 0;
+        background-color: white;
+    }
+}
+
+.loader_H1 {
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+}

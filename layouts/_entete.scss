@@ -1,150 +1,63 @@
-/*  ENTETE  */
-
-header {
-    text-align: center;
-}
-
-.header-lieu {
-    border-top: darken($couleur_map, 15%) solid 5px;
-    box-shadow: inset 0px 5px darken($couleur_map, 5%);
-    background-color: $couleur_map;
-    height: 30px;
-    padding-top: 10px;
-    font-weight: bold;
-    color: $couleur-pied-de-page;
-    & i {
-        padding-right: 20px;
+    /*  ENTETE  */
+    
+    header {
+        text-align: center;
     }
-}
-
-.header-texte {
-    background-color: $couleur-restaurant;
-    height: 300px;
-    &__H2 {
-        padding-left: 30px;
-        padding-right: 30px;
+    
+    .header-lieu {
+        border-top: darken($couleur_map, 15%) solid 5px;
+        box-shadow: inset 0px 5px darken($couleur_map, 5%);
+        background-color: $couleur_map;
+        height: 30px;
+        padding-top: 10px;
         font-weight: bold;
-        font-size: 30px;
-    }
-    &__H3 {
-        padding-left: 15px;
-        padding-right: 15px;
-        font-weight: normal;
-        font-size: 20px;
         color: $couleur-pied-de-page;
-        margin-bottom: 60px;
+        & i {
+            padding-right: 20px;
+        }
     }
-}
-
-.header-bouton_explorer {
-    box-shadow: 4px 4px $couleur_map;
-    border-radius: 25px;
-    background: linear-gradient($couleur-secondaire, $couleur-primaire);
-    padding: 20px;
-    text-decoration: none;
-    color: $couleur-texte-fond;
-    font-weight: bold;
-}
-
-.header-restaurant {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-    margin: 5px;
-    & a {
-        align-self: center;
-        width: 20%;
-        font-size: 25px;
-        color: $couleur-pied-de-page;
+    
+    .header-texte {
+        background-color: $couleur-restaurant;
+        height: 300px;
+        &__H2 {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        &__H3 {
+            padding-left: 15px;
+            padding-right: 15px;
+            font-weight: normal;
+            font-size: 20px;
+            color: $couleur-pied-de-page;
+            margin-bottom: 60px;
+        }
     }
-    & h1 {
-        width: 80%;
+    
+    .header-bouton_explorer {
+        box-shadow: 4px 4px $couleur_map;
+        border-radius: 25px;
+        background: linear-gradient($couleur-secondaire, $couleur-primaire);
+        padding: 20px;
+        text-decoration: none;
+        color: $couleur-texte-fond;
+        font-weight: bold;
     }
-}
-
-.loader {
-    opacity: 0;
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 25px;
-    margin-left: 10%;
-    border-radius: 15px;
-    background-color: white;
-    animation: loader-animation;
-    animation-duration: $anim-loader2-duree * $anim-loader2-nombre;
-    animation-delay: $anim-loader2-delai;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: backwards;
-}
-
-@keyframes loader-animation {
-    0% {
-        opacity: 1;
+    
+    .header-restaurant {
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        margin: 5px;
+        & a {
+            align-self: center;
+            width: 20%;
+            font-size: 25px;
+            color: $couleur-pied-de-page;
+        }
+        & h1 {
+            width: 80%;
+        }
     }
-    50% {
-        background-color: $couleur-primaire;
-        box-shadow: 10px 10px 5px $couleur-primaire;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.loader--2 {
-    opacity: 0;
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 25px;
-    margin-left: 10%;
-    margin-top: -25px;
-    border-radius: 15px;
-    background-color: white;
-    transform-origin: center;
-    animation: loader-animation--2;
-    animation-duration: $anim-loader2-duree;
-    animation-delay: $anim-loader2-delai;
-    animation-iteration-count: $anim-loader2-nombre;
-    animation-timing-function: ease-in;
-    animation-fill-mode: backwards;
-}
-
-@keyframes loader-animation--2 {
-    0% {
-        opacity: 0;
-        transform: scaleX(0);
-        background-color: $couleur-primaire;
-        box-shadow: 10px 10px 5px $couleur-primaire;
-    }
-    35% {
-        opacity: 1;
-        transform: scaleX(1);
-        background-color: $couleur-secondaire;
-        box-shadow: 10px 10px 5px $couleur-secondaire;
-    }
-    55% {
-        opacity: 1;
-        transform: scaleX(1);
-    }
-    90% {
-        opacity: 0;
-        transform: scaleX(0);
-        background-color: $couleur-primaire;
-        box-shadow: 10px 10px 5px $couleur-primaire;
-    }
-    100% {
-        opacity: 0;
-        background-color: white;
-    }
-}
-
-.loader_H1 {
-    width: 100%;
-    text-align: center;
-    font-size: 17px;
-    color: white;
-}
