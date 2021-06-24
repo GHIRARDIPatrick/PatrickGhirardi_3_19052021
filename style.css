@@ -176,13 +176,17 @@ header {
 }
 
 .header-bouton_explorer {
-  box-shadow: 4px 4px #eaeaea;
-  border-radius: 25px;
+  box-shadow: 4px 4px 7px #d1d1d1, -4px 4px 7px #d1d1d1;
+  border-radius: 30px;
   background: linear-gradient(#ff79da, #9356dc);
   padding: 20px;
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
+}
+.header-bouton_explorer:hover {
+  opacity: 0.7;
+  box-shadow: 4px 4px 10px #919191, -4px 4px 10px #919191;
 }
 
 .header-restaurant {
@@ -217,7 +221,7 @@ footer li {
 }
 footer a {
   margin-left: 0;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
 }
 
@@ -236,6 +240,10 @@ footer a {
 .footer__svg2 {
   font-size: 12px;
   padding-right: 7px;
+}
+
+.footer-texte-gras {
+  font-weight: bold;
 }
 
 /*  FONCTIONNEMENT  */
@@ -282,11 +290,19 @@ footer a {
 .fonctionnement-encadre__svg {
   padding-left: 20px;
   padding-right: 20px;
+  font-weight: normal;
 }
 .fonctionnement-encadre__svg2 {
   padding-left: 20px;
   padding-right: 20px;
   color: #9356dc;
+}
+.fonctionnement-encadre:hover {
+  background-color: #f2eafb;
+}
+.fonctionnement-encadre:hover > .fonctionnement-encadre__svg {
+  color: #6023a9;
+  font-weight: bold;
 }
 
 /*  RESTAURANTS  */
@@ -514,13 +530,19 @@ footer a {
 }
 
 .article__bouton_commander {
-  box-shadow: 4px 4px #eaeaea;
-  border-radius: 25px;
+  box-shadow: 4px 4px 7px #d1d1d1, -4px 4px 7px #d1d1d1;
+  border-radius: 30px;
   background: linear-gradient(#ff79da, #9356dc);
   padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.8);
   font-weight: bold;
+}
+.article__bouton_commander:hover {
+  opacity: 0.7;
+  box-shadow: 4px 4px 10px #919191, -4px 4px 10px #919191;
 }
 
 .overflow, .restaurant-page__box h4, .restaurant-page__box h5, .restaurant-page__plat {
@@ -723,11 +745,11 @@ label {
   }
 
   .fonctionnement {
-    width: 37%;
+    width: 44%;
   }
 
   .restaurants {
-    width: 60%;
+    width: 54%;
     margin-top: 20px;
   }
 

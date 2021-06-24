@@ -96,13 +96,19 @@
 }
 
 .article__bouton_commander {
-    box-shadow: 4px 4px $couleur_map;
-    border-radius: 25px;
+    box-shadow: 4px 4px 7px darken($couleur_map, 10), -4px 4px 7px darken($couleur_map, 10);
+    border-radius: 30px;
     background: linear-gradient($couleur-secondaire, $couleur-primaire);
     padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-decoration: none;
-    color: $couleur-texte-fond;
+    color: $couleur-texte-bouton;
     font-weight: bold;
+    &:hover {
+        opacity: 0.7;
+        box-shadow: 4px 4px 10px darken($couleur_map, 35), -4px 4px 10px darken($couleur_map, 35);
+    }
 }
 
 .overflow {

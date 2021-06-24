@@ -14,7 +14,7 @@ footer {
     }
     & a {
         margin-left: 0;
-        color: $couleur-texte-fond;
+        color: $couleur-texte-bouton;
         text-decoration: none;
     }
 }
@@ -34,4 +34,8 @@ footer {
 .footer__svg2 {
     font-size: 12px;
     padding-right: 7px;
+}
+
+.footer-texte-gras {
+    font-weight: bold;
 }

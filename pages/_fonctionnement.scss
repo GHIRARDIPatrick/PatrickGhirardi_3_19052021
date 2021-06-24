@@ -42,10 +42,18 @@
     &__svg {
         padding-left: 20px;
         padding-right: 20px;
+        font-weight: normal;
     }
     &__svg2 {
         padding-left: 20px;
         padding-right: 20px;
         color: $couleur-primaire;
+    }
+    &:hover {
+        background-color: lighten($couleur-primaire, 35);
+        &>.fonctionnement-encadre__svg {
+            color: darken($couleur-primaire, 20);
+            font-weight: bold;
+        }
     }
 }
