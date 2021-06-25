@@ -126,23 +126,6 @@
     }
 }
 
-// @keyframes coeur-battement {
-//     0% {
-//         transform: scale(1.0);
-//     }
-//     25% {
-//         transform: scale(1.2);
-//     }
-//     50% {
-//         transform: scale(1.0);
-//     }
-//     75% {
-//         transform: scale(1.2);
-//     }
-//     100% {
-//         transform: scale(1.0);
-//     }
-// }
 @keyframes affichage-plat {
     0% {
         opacity: 0;
@@ -224,10 +207,6 @@
         transform: translate(12px, 0px);
         animation-fill-mode: forwards;
     }
-    // 100% {
-    //     opacity: 0;
-    //     transform: translate(50px, 0px);
-    // }
 }
 
 .coche-validation {
